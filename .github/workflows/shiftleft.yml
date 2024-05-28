@@ -20,7 +20,7 @@ jobs:
       run: |
         ${GITHUB_WORKSPACE}/sl --version
         ${GITHUB_WORKSPACE}/sl analyze --strict --verbose --wait \
-          --app shiftleft-c-demo \
+          --app shiftleft-c-demo-wocontainer \
           --tag branch=${{ github.head_ref }} \
           --c .
       env:

@@ -19,10 +19,10 @@ jobs:
     - name: preZero Static Analysis
       run: |
         ${GITHUB_WORKSPACE}/sl --version
-        ${GITHUB_WORKSPACE}/sl analyze --strict --wait \
+        ${GITHUB_WORKSPACE}/sl analyze --strict --verbose --wait \
           --app shiftleft-c-demo \
           --tag branch=${{ github.head_ref }} \
-          --c --container 18fgsa/s3-resource .
+          --c .
       env:
         SHIFTLEFT_ACCESS_TOKEN: ${{ secrets.SHIFTLEFT_ACCESS_TOKEN }}
         SHIFTLEFT_API_HOST: www.shiftleft.io
